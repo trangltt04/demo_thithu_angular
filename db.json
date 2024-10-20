@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "name": "SamSung update",
+      "image": "https://picsum.photos/200/300",
+      "quantity": 999,
+      "category": "iphone",
+      "id": 4
+    },
+    {
+      "name": "Iphone 12 update",
+      "image": "https://picsum.photos/200/200",
+      "quantity": 8889,
+      "category": "laptop",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$hLLMZtNdCBZsAYNM/wD9tOhCxTBbUI80t99hI882PskfKLNHYinam",
+      "id": 1
+    }
+  ]
+}

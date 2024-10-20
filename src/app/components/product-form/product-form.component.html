@@ -1,0 +1,58 @@
+<form [formGroup]="productForm" (ngSubmit)="handleSubmit()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      formControlName="name"
+    />
+    @if(name?.touched && name?.hasError('required')){
+    <small class="text-danger">Bat buoc</small>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Image</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      formControlName="image"
+    />
+    @if(image?.touched && image?.hasError('required')){
+    <small class="text-danger">Bat buoc</small>
+    }
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Quantity</label>
+    <input
+      type="number"
+      class="form-control"
+      id="exampleInputPassword1"
+      formControlName="quantity"
+    />
+    @if(quantity?.touched && quantity?.hasError('required')){
+    <small class="text-danger">Bat buoc</small>
+    }
+  </div>
+
+  <div class="mb-3">
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      formControlName="category"
+    >
+      <option selected>Category</option>
+      <option value="iphone">Iphone</option>
+      <option value="laptop">Laptop</option>
+      <option value="samsung">SamSung</option>
+    </select>
+    @if(category?.touched && category?.hasError('required')){
+    <small class="text-danger">Bat buoc</small>
+    }
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
